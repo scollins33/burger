@@ -7,16 +7,14 @@ let router = express.Router();
 // sends index and creates the page elements
 router.get('/', (req, res) => {
     Burger.getAll((data) => {
-        Burger.LOG(data);
-        res.send(data);
+        res.render('index', {burgers: data});
     });
 });
 
 // api call to return all burgers
 router.get('/api/burgers', (req, res) => {
     Burger.getAll((data) => {
-        Burger.LOG(data);
-        res.send(data);
+        res.json(data);
     });
 });
 
