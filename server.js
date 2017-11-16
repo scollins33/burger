@@ -25,7 +25,7 @@ app.set('view engine', 'handlebars');
 app.use('/', bgrCtrl);
 
 
-// Run the server
+// Run the serverw
 app.listen(PORT, () => {
     console.log(`Server is listening on Port ${PORT}`);
 });

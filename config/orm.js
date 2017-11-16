@@ -23,6 +23,7 @@ let orm = {
         // run the query string
         connection.query(qString, [pTableName, pBurgerVal, pDevouredBool], (err, data) => {
             if (err) { return console.log(err); }
+
             pCallback(data);
         });
     },

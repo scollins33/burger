@@ -1,7 +1,23 @@
-<ul>
-    {{#each burgers}}
-        <li>
-            {{id}} | {{burger_name}}
-        </li>
-    {{/each}}
-</ul>
+<div class="container">
+    <!-- Form Row -->
+    <div class="row">
+        <input type="text" name="burgerName" id="burgerText">
+        <br>
+        <input type="submit" id="burgerSubmit" value="Submit">
+    </div>
+
+    <br>
+
+    <!-- Burger Display -->
+    <div class="row">
+        {{#each burgers}}
+            <div class="row">
+                <div class="well well-sm col-xs-4">{{id}} | {{burger_name}}</div>
+                <div class="col-xs-2">
+                    <button type="button" class="devour">Devour it!</button>
+                </div>
+            </div>
+        {{/each}}
+    </div>
+
+</div>

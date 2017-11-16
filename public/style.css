@@ -1,0 +1,22 @@
+body {
+    background-color: #FEFE9F;
+    text-align: center;
+}
+
+img {
+    height: 300px;
+    width: 350px;
+}
+
+.devour {
+    height: 40px;
+}
+
+#burgerSubmit {
+    width: 140px;
+}
+
+#burgerText {
+    height: 40px;
+    width: 200px;
+}

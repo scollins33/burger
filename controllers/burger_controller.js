@@ -27,4 +27,12 @@ router.post('/api/devour/:id', (req, res) => {
         });
 });
 
+// create new burger on POST
+router.post('/api/new', (req, res) => {
+    Burger.insert(req.body.burgerName, (data) => {
+        console.log('creating burger');
+        res.status(200).end();
+    });
+});
+
 module.exports = router;
