@@ -8,16 +8,34 @@
 
     <br>
 
-    <!-- Burger Display -->
+    <!-- Burger Lists Row -->
     <div class="row">
-        {{#each burgers}}
-            <div class="row">
-                <div class="well well-sm col-xs-4">{{id}} | {{burger_name}}</div>
-                <div class="col-xs-2">
-                    <button type="button" class="devour">Devour it!</button>
-                </div>
-            </div>
-        {{/each}}
+        <!-- Burger Display -->
+        <div class="col-xs-2"></div>
+        <div class="col-xs-5">
+            {{#each burgers}}
+                {{#unless devoured}}
+                    <div class="row">
+                        <div class="well well-sm col-xs-8">{{id}} | {{burger_name}}</div>
+                        <div class="col-xs-4">
+                            <button type="button" class="devour" data-id="{{id}}">Devour it!</button>
+                        </div>
+                    </div>
+                {{/unless}}
+            {{/each}}
+        </div>
+
+        <!-- Devoured Display -->
+        <div class="col-xs-5">
+            {{#each burgers}}
+                {{#if devoured}}
+                    <div class="row">
+                        <div class="well well-sm col-xs-8 devoured">{{id}} | {{burger_name}}</div>
+                    </div>
+                {{/if}}
+            {{/each}}
+        </div>
     </div>
+
 
 </div>
