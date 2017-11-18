@@ -10,8 +10,12 @@ const dbCreds = {
     database: 'burgers_db'
 };
 
-// create the connection and test it
-let connection = mysql.createConnection(dbCreds);
+if (process.env.JAWSDB_URL) {
+    let connection = mysql.createConnection(process.env.JAWSDB_URL);
+}
+else {
+    let connection = mysql.createConnection(dbCreds);
+}
 
 connection.connect((err) => {
     if (err) { return console.log(err); }
