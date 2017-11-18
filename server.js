@@ -27,5 +27,5 @@ app.use('/', bgrCtrl);
 
 // Run the serverw
 app.listen(port, () => {
-    console.log(`Server is listening on Port ${PORT}`);
+    console.log(`Server is listening on Port ${port}`);
 });
