@@ -10,11 +10,13 @@ const dbCreds = {
     database: 'burgers_db'
 };
 
+let connection;
+
 if (process.env.JAWSDB_URL) {
-    let connection = mysql.createConnection(process.env.JAWSDB_URL);
+    connection = mysql.createConnection(process.env.JAWSDB_URL);
 }
 else {
-    let connection = mysql.createConnection(dbCreds);
+    connection = mysql.createConnection(dbCreds);
 }
 
 connection.connect((err) => {
