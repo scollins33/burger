@@ -5,7 +5,7 @@ const bodyParser = require('body-parser');
 
 const bgrCtrl = require('./controllers/burger_controller.js');
 
-const PORT = 8080;
+const PORT = process.env.port || 8080;
 
 // create the application
 let app = express();
